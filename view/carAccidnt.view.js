@@ -18,8 +18,8 @@ sap.ui.jsview("Limor.view.carAccidnt", {
 	 // var oModel = new sap.ui.model.odata.ODataModel("http://services.odata.org/Northwind/Northwind.svc/");
 	    var oModel = new sap.ui.model.json.JSONModel();
 	    oModel.setData({
-            firstName: "Limor",
-            lastName: "Erez",
+            firstName: "Limor111",
+            lastName: "Erezsdfsf",
             date:"19740415",
             street:"yakinton 10",
             city:"Netanya",
@@ -29,6 +29,7 @@ sap.ui.jsview("Limor.view.carAccidnt", {
             carID: "66-054-65"
         });
 	    
+	    sap.ui.getCore().setModel(oModel);
 	    
 	  var oLayout1 = new sap.ui.layout.form.GridLayout();
 // 		var oLayout2 = new sap.ui.layout.form.ResponsiveLayout();
@@ -60,13 +61,13 @@ sap.ui.jsview("Limor.view.carAccidnt", {
 									                   	  	 new sap.ui.layout.GridData({span: "L1 M1 S12"})]
 									})
 								}),
-							fields: [new sap.ui.commons.TextField({value: "Limor",
+							fields: [new sap.ui.commons.TextField({value:"{/firstName}",
 								layoutData: new sap.ui.core.VariantLayoutData({
 									multipleLayoutData: [new sap.ui.layout.ResponsiveFlowLayoutData({weight: 4}),
 								                   	  	 new sap.ui.layout.GridData({span: "L5 M5 S12"})]
 											})
 										}),
-								  new sap.ui.commons.TextField({value: "Erez",
+								  new sap.ui.commons.TextField({value: "{/lastName}",
 										layoutData: new sap.ui.core.VariantLayoutData({
 										multipleLayoutData: [new sap.ui.layout.ResponsiveFlowLayoutData({weight: 5}),
 									                   	  	 new sap.ui.layout.GridData({span: "L5 M5 S12"})]
@@ -82,7 +83,7 @@ sap.ui.jsview("Limor.view.carAccidnt", {
 									                  	     new sap.ui.layout.form.GridElementData({hCells: "1"})]
 									})
 								}),
-							fields: [new sap.ui.commons.DatePicker({yyyymmdd: "19740415",
+							fields: [new sap.ui.commons.DatePicker({yyyymmdd: "{/date}",
 								layoutData: new sap.ui.core.VariantLayoutData({
 									multipleLayoutData: [new sap.ui.layout.ResponsiveFlowLayoutData({weight: 4}),
 									                  	     new sap.ui.layout.form.GridElementData({hCells: "3"})]
@@ -90,23 +91,8 @@ sap.ui.jsview("Limor.view.carAccidnt", {
 							})
 							],
 							layoutData: new sap.ui.layout.ResponsiveFlowLayoutData({linebreak: true, margin: false})
-						}),
-						new sap.ui.layout.form.FormElement({
-							label: new sap.ui.commons.Label({text:"Gender",
-								layoutData: new sap.ui.core.VariantLayoutData({
-									multipleLayoutData: [new sap.ui.layout.ResponsiveFlowLayoutData({weight: 1}),
-									                 	     new sap.ui.layout.form.GridElementData({hCells: "1"})]
-									})
-								}),
-							fields: [new sap.ui.commons.RadioButtonGroup({
-								items: [new sap.ui.core.Item({text: "male"}),
-									new sap.ui.core.Item({text: "female"})],
-								layoutData: new sap.ui.core.VariantLayoutData({
-									multipleLayoutData: [new sap.ui.layout.ResponsiveFlowLayoutData({weight: 4}),
-												     new sap.ui.layout.form.GridElementData({vCells: 2})]
-									})
-							})]
 						})
+					
 						],
 						layoutData: new sap.ui.core.VariantLayoutData({
 								multipleLayoutData: [new sap.ui.layout.GridData({span: "L12 M12 S12"})]
