@@ -10,7 +10,7 @@ sap.ui.controller("Limor.view.carAccidnt", {
 //	},
 
 /**
-* Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
+* Similar to onA fterRendering, but this hook is invoked before the controller's View is re-rendered
 * (NOT before the first rendering! onInit() is used for that one!).
 * @memberOf Limor.view.carAccidnt
 */

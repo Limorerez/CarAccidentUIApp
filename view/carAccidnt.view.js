@@ -9,7 +9,7 @@ sap.ui.jsview("Limor.view.carAccidnt", {
 	},
 
 	/** Is initially called once after the Controller has been instantiated. It is the place where the UI is constructed. 
-	* Since the Controller is given to this method, its event handlers can be attached right away. 
+	* Since the Contr oller is given to this method, its event handlers can be attached right away. 
 	* @memberOf Limor.view.carAccidnt
 	*/ 
 	createContent : function(oController) {
